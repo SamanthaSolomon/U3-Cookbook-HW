@@ -39,15 +39,26 @@ repository.
 
 ## Routing Table
 
-Update the below routing table with the routes
+Cookbook Routes
 
 | **URL**     | **HTTP Verb** | **Action** | **Description**             |
 | ----------- | ------------- | -------------- | ---------------------- |
-| /     | GET           |    index            | get all fruits         |
-| /     | POST          |    create            | create a new fruit     |
-| / | GET           |    show            | get a single fruit     |
-| / | PUT           |    update            | update a single fruit  |
-| / | DELETE        |    destroy            | destroy a single fruit |
+| /     | GET           |    find           | get all         |
+| /title/:title     | GET    |    findOne  | find one by title     |
+| /year/:year | GET           |    findOne | find one by year     |
+| / | POST           |    create          | create cookbook |
+| /:id | PUT        |    update | update a cookbook |
+| /title/:title | DELETE    |   delete | delete a cookbook |
+
+Author Routes
+
+| **URL**     | **HTTP Verb** | **Action** | **Description**             |
+| ----------- | ------------- | -------------- | ---------------------- |
+| /     | GET           |    find           | get all         |
+| /firstName/:firstName | GET    |    findOne  | find one by first name     |
+| / | POST  |    create | create author     |
+| /:id | PUT  |  Update          | update author |
+| /:id | PUT        |    update | update a cookbook by author |
 
 ## Plagiarism
 
