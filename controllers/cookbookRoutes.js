@@ -24,7 +24,7 @@ const getCookbookTitle = (req, res) => {
             cookbooks: cookbooks})
     })
 }
-router.get('/:title', getCookbookTitle)
+router.get('/title/:title', getCookbookTitle)
 
 // Write the route to get cookbook by year published
 
@@ -35,7 +35,7 @@ const getCookbookYear = (req, res) => {
             cookbooks: cookbooks})
     })
 }
-router.get('/:year', getCookbookYear)
+router.get('/year/:year', getCookbookYear)
 // Write the route to create a cookbook
 
 const createCookbook = (req,res) => {
@@ -64,6 +64,7 @@ const updateCookbook = (req, res) => {
     })
 }
 router.put("/:id", updateCookbook)
+
 // Write the route to delete the cookbook by title
 const deleteCookbook = (req, res) => {
     Cookbook.findOneAndDelete({title: req.params.title}).then((cookbook) => {
@@ -76,6 +77,6 @@ const deleteCookbook = (req, res) => {
         })
     })
 }
-router.delete("/:title", deleteCookbook)
+router.delete("/title/:title", deleteCookbook)
 
 module.exports = router;
