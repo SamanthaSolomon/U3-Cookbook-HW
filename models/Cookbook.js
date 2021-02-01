@@ -15,4 +15,4 @@ const cookbookSchema = new mongoose.Schema({
 const Cookbook = mongoose.model('Cookbook', cookbookSchema)
 
 //export model
-module.exports = Cookbook
+module.exports = Coo

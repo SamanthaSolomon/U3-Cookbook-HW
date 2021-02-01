@@ -14,7 +14,7 @@ const authorSchema = new mongoose.Schema({
     firstName: String,
     lastName: String,
     cookbooks: [{
-        id: String,
+        _id: String,
         title: String,
         yearPublished: Number
         }]
